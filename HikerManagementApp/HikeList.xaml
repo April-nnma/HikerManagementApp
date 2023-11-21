@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HikerManagementApp.HikeList"
+             Title="HikeList">
+    <CollectionView x:Name="collectionView" SelectionMode="Single">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Row 0 -->
+                    <Label Grid.Row="0" Grid.Column="0" Text="Name hike: " FontAttributes="Bold" TextColor="Wheat" />
+                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding HikeName}" TextColor="Wheat" Margin="0,0,0,0"></Label>
+                    <Label Grid.Row="0" Grid.Column="2" Text="Location: " FontAttributes="Bold" TextColor="Wheat"></Label>
+                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding HikeLocation}" TextColor="Wheat" Margin="0,0,0,0"></Label>
+
+                    <!-- Row 1 -->
+                    <Label Grid.Row="1" Grid.Column="0" Text="Date of hike: " FontAttributes="Bold" TextColor="Wheat" Margin="0,0,8,0" />
+                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding HikeDate, StringFormat='{0:dd/MM/yyyy}'}" TextColor="Wheat" Margin="0,0,0,0"></Label>
+                    <Label Grid.Row="1" Grid.Column="2" Text="Time : " FontAttributes="Bold" TextColor="Wheat" Margin="15,0,5,0"></Label>
+                    <Label Grid.Row="1" Grid.Column="3" Text="{Binding HikeTime, StringFormat='{0:hh:mm}'}" TextColor="Wheat" Margin="0,0,0,0"></Label>
+
+                    <!-- Row 2 -->
+                    <Label Grid.Row="2" Grid.Column="0" Text="Length: " FontAttributes="Bold" TextColor="Wheat" Margin="0,0,0,0" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding HikeLength}" TextColor="Wheat"></Label>
+                    <Label Grid.Row="2" Grid.Column="2" Text="Days: " FontAttributes="Bold" TextColor="Wheat" Margin="0,0,5,0"></Label>
+                    <Label Grid.Row="2" Grid.Column="3" Text="{Binding HikeDays}" TextColor="Wheat" Margin="0,0,0,0"></Label>
+
+                    <!-- Row 3 -->
+                    <Label Grid.Row="3" Grid.Column="0" Text="Parking: " FontAttributes="Bold" TextColor="Wheat" Margin="0,0,0,0"></Label>
+                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding HikeParking}" TextColor="Wheat" Margin="0,0,0,0"></Label>
+                    <Label Grid.Row="3" Grid.Column="2" Text="Level: " FontAttributes="Bold" TextColor="Wheat" />
+                    <Label Grid.Row="3" Grid.Column="3" Text="{Binding HikeLevel}" TextColor="Wheat"></Label>
+
+                    <!--Row 4-->
+                    <Label Grid.Row="4" Grid.Column="0" Text="Description: " FontAttributes="Bold" TextColor="Wheat" Margin="0,0,0,0"></Label>
+                    <Label Grid.Row="4" Grid.Column="1" Text="{Binding HikeDescription}" TextColor="Wheat" Margin="0,0,0,0"></Label>
+                    <Label Grid.Row="4" Grid.Column="2" Text="Gear: " FontAttributes="Bold" TextColor="Wheat" Margin="0,0,0,0"></Label>
+                    <Label Grid.Row="4" Grid.Column="3" Text="{Binding HikeGear}" TextColor="Wheat" Margin="0,0,0,0"></Label>
+                </Grid>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

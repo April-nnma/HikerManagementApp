@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HikerManagementApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="20"
+            Padding="10,0"
+            VerticalOptions="Start"
+            HorizontalOptions="FillAndExpand">
+            <Frame Padding="5" CornerRadius="4">
+                <Label Text="Hiker Management App" HorizontalOptions="Center" TextColor="DarkBlue" FontSize="Title"></Label>
+            </Frame>
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Name of hike: " VerticalOptions="Center" Margin="0,0,30,0" HorizontalOptions="Start"></Label>
+                <Entry x:Name="txtNameHike" HorizontalOptions="StartAndExpand" Placeholder="Enter name of hike" VerticalOptions="Center"></Entry>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Location: " VerticalOptions="Center" Margin="0,0,70,0" HorizontalOptions="Start"></Label>
+                <Entry x:Name="txtLocation" HorizontalOptions="StartAndExpand" Placeholder="Enter location of hike" VerticalOptions="Center"></Entry>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Date of hike: " VerticalOptions="Center" Margin="0,0,40,0"></Label>
+                <DatePicker x:Name="txtDateHike" Format="dd/MM/yyyy"></DatePicker>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Time of hike: " VerticalOptions="Center" Margin="0,0,15,0"></Label>
+                <TimePicker x:Name="txtTimeHike" Format="hh:mm tt"></TimePicker>
+                <Label Text="Days: " VerticalOptions="Center" Margin="20,0,5,0" HorizontalOptions="Start"></Label>
+                <Entry x:Name="txtDay" Placeholder="Enter days" Keyboard="Numeric"></Entry>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Length of hike: " VerticalOptions="Center" Margin="0,0,20,0" HorizontalOptions="Start"></Label>
+                <Entry x:Name="txtLengthHike" HorizontalOptions="StartAndExpand" Placeholder="Enter length of hike" VerticalOptions="Center"></Entry>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Parking Available: " VerticalOptions="Center" Margin="0,0,30,0" HorizontalOptions="Start"></Label>
+                <Switch x:Name="txtParkingHike" VerticalOptions="Center"></Switch>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Level of difficulty: " VerticalOptions="Center" Margin="0,0,30,0"></Label>
+                <Picker x:Name="txtLevelHike" Title="Please choose" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                    <Picker.Items>
+                        <x:String>Easy</x:String>
+                        <x:String>Normal</x:String>
+                        <x:String>Hard</x:String>
+                    </Picker.Items>
+                </Picker>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Description: " VerticalOptions="Center" Margin="0,0,50,0" HorizontalOptions="Start"></Label>
+                <Entry x:Name="txtDescriptionHike" HorizontalOptions="StartAndExpand" Placeholder="Enter description of hike" VerticalOptions="Center"></Entry>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Required Gear: " VerticalOptions="Center" Margin="0,0,30,0" HorizontalOptions="Start"></Label>
+                <Entry x:Name="txtGearHike" HorizontalOptions="StartAndExpand" Placeholder="Enter gear of hike" VerticalOptions="Center"></Entry>
+            </HorizontalStackLayout>
+            <Button
+                x:Name="btnSave"
+                Text="Save"
+                SemanticProperties.Hint="Display info hike selected"
+                Clicked="btnSave_Clicked"
+                HorizontalOptions="Center">
+            </Button>
+            <Button
+                x:Name="btnView"
+                Text="View"
+                Clicked="btnView_Clicked"
+                HorizontalOptions="Center">
+            </Button>
+            <Button
+                x:Name="btnLoad"
+                Text="Load"
+                Clicked="btnLoad_Clicked"
+                HorizontalOptions="Center">
+            </Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
