@@ -20,7 +20,7 @@ namespace HikerManagementApp
 
         private async void btnSave_Clicked(object sender, EventArgs e)
         {
-            var response = await DisplayAlert("Confirmation", "Are you sure you want to save this hike?", "CANCEL", "OK");
+            var response = await DisplayAlert("Confirmation", "Are you sure you want to save this hike?", "OK", "CANCEl");
             if (response)
             {
                 try

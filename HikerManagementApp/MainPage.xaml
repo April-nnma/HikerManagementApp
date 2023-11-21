@@ -56,25 +56,40 @@
                 <Label Text="Required Gear: " VerticalOptions="Center" Margin="0,0,30,0" HorizontalOptions="Start"></Label>
                 <Entry x:Name="txtGearHike" HorizontalOptions="StartAndExpand" Placeholder="Enter gear of hike" VerticalOptions="Center"></Entry>
             </HorizontalStackLayout>
-            <Button
-                x:Name="btnSave"
-                Text="Save"
-                SemanticProperties.Hint="Display info hike selected"
-                Clicked="btnSave_Clicked"
-                HorizontalOptions="Center">
-            </Button>
-            <Button
-                x:Name="btnView"
-                Text="View"
-                Clicked="btnView_Clicked"
-                HorizontalOptions="Center">
-            </Button>
-            <Button
-                x:Name="btnLoad"
-                Text="Load"
-                Clicked="btnLoad_Clicked"
-                HorizontalOptions="Center">
-            </Button>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button
+        x:Name="btnSave"
+        Text="Save"
+        SemanticProperties.Hint="Display info hike selected"
+        Clicked="btnSave_Clicked"
+        HorizontalOptions="Center"
+        Grid.Column="0">
+                </Button>
+
+                <Button
+        x:Name="btnView"
+        Text="View"
+        Clicked="btnView_Clicked"
+        HorizontalOptions="Center"
+        Grid.Column="1">
+                </Button>
+
+                <Button
+        x:Name="btnLoad"
+        Text="Load"
+        Clicked="btnLoad_Clicked"
+        HorizontalOptions="Center"
+        Grid.Column="2">
+                </Button>
+            </Grid>
+
+
 
         </VerticalStackLayout>
     </ScrollView>
